@@ -23,7 +23,7 @@
     schemaCallback([tableInfo]);
     };
     myConnector.getData = function(table, doneCallback) {
-    $.getJSON("http://www.nyc.gov/html/tlc/downloads/csv/data_reports_mont  hly_indicators_yellow.json ", function(resp) {
+    $.getJSON("http://www.nyc.gov/html/tlc/downloads/csv/data_reports_monthly_indicators_yellow.json ", function(resp) {
     var feat = resp;
     tableData = [];
     // Iterate over the JSON object
