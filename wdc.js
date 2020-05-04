@@ -4,7 +4,7 @@
     var cols = [
     { id : "areaName", alias:"Area Name", dataType : tableau.dataTypeEnum.string },
     { id : "totalLabConfirmedCases", alias: "Total Confirmed Cases",dataType : tableau.dataTypeEnum.string },
-    { id : "dailyLabConfirmedCases",alias: "Daily COnfirmed Cases", dataType : tableau.dataTypeEnum.string },
+    { id : "dailyLabConfirmedCases",alias: "Daily Confirmed Cases", dataType : tableau.dataTypeEnum.string },
     ];
     var tableInfo = {
     id : "cases",
@@ -20,9 +20,9 @@
     // Iterate over the JSON object
     for (var i = 0, len = feat.length; i < len; i++) {
     tableData.push({
-    "areaName": feat[i]["dailyRecords"]["areaName"],
-    "totalLabConfirmedCases": feat[i]["dailyRecords"]["totalLabConfirmedCases"],
-    "dailyLabConfirmedCases": feat[i]["dailyRecords"]["dailyLabConfirmedCases"],
+    "areaName": feat["dailyRecords"]["areaName"],
+    "totalLabConfirmedCases": feat["dailyRecords"]["totalLabConfirmedCases"],
+    "dailyLabConfirmedCases": feat["dailyRecords"]["dailyLabConfirmedCases"],
     });
     }
     table.appendRows(tableData);
